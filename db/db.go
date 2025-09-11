@@ -11,7 +11,7 @@ import (
 var DB *gorm.DB
 
 func Connect() {
-	dsn := "postgres://username:password@host:port/dbname?sslmode=require"
+	dsn := "postgres://postgres:praneeth@localhost:5432/mydb?sslmode=require"
 	var err error
 	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
